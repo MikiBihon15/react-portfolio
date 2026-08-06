@@ -1,6 +1,6 @@
-import About from './components/about';
-import Projects from './components/projects';
-import Contacts from './components/contacts';
+import About from './components/about/about';
+import Projects from './components/projects/projects';
+import Contacts from './components/contacts/contacts';
 
 function App() {
   return (
