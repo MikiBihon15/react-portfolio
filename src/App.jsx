@@ -1,18 +1,17 @@
-import Navbar from './components/layout/navbar'; // 1. Import the Navbar component
+import Navbar from './components/layout/navbar';
 import About from './components/about/about';
 import Projects from './components/projects/projects';
 import Contacts from './components/contacts/contacts';
 
 function App() {
   return (
-    <div className="bg-slate-900 text-slate-100 min-h-screen">
-      {/* 2. Place Navbar right at the top */}
-      <Navbar /> 
-
-      {/* Your existing sections stay below it */}
-      <About />
-      <Projects />
-      <Contacts />
+    <div className="bg-zinc-950 text-zinc-100 min-h-screen pt-24 w-full">
+      <Navbar />
+      <div className="max-w-5xl mx-auto px-4">
+        <About />
+        <Projects />
+        <Contacts />
+      </div>
     </div>
   );
 }
