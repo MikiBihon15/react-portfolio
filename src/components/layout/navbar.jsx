@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 export default function Navbar() {
   const [activeLink, setActiveLink] = useState('Home');
-
   const links = ['Home', 'Projects', 'Contacts'];
 
   return (
