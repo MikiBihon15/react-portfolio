@@ -5,13 +5,29 @@ import Contacts from './components/contacts/contacts';
 
 function App() {
   return (
-    <div className="bg-zinc-200 text-zinc-200 min-h-screen pt-24 w-full font-sans anstialiased">
+    /* min-h-screen & w-full ensures background covers the whole screen on all devices */
+    <div className="bg-zinc-200 text-zinc-900 min-h-screen w-full antialiased">
       <Navbar />
-      <div className="max-w-4xl mx-auto px-6 space-y-16 pb-16">
-        <About />
-        <Projects />
-        <Contacts />
-      </div>
+      
+      {/* 
+        Responsive Container:
+        - pt-28: Extra space at top so content sits below fixed navbar
+        - px-4 sm:px-6 lg:px-8: Responsive side margins (narrower on phones, wider on laptops)
+        - max-w-4xl lg:max-w-6xl: Keeps content centered and readable on giant screens
+      */}
+      <main className="max-w-4xl lg:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-16 space-y-16 sm:space-y-24">
+        <section id="hero">
+          <About />
+        </section>
+        
+        <section id="projects">
+          <Projects />
+        </section>
+        
+        <section id="contacts">
+          <Contacts />
+        </section>
+      </main>
     </div>
   );
 }
