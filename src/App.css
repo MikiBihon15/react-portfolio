@@ -1,19 +1,20 @@
-/* 1. Resets margins and fixes spacing issues */
+/* 1. Resets margins and fixes box sizing */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* 2. Kills all list bullet points globally (goodbye stray dot!) */
+/* 2. Remove default list styles */
 ul, li {
   list-style: none;
 }
 
-/* 3. Sets a clean font and centers everything nicely on the page */
+/* 3. Base body setup */
 body {
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.6;
-  text-align: center;
-  padding: 20px;
+  background-color: #0f172a; /* Slate 900 dark background */
+  color: #ffffff;
+  min-height: 100vh;
 }
