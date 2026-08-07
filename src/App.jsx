@@ -15,7 +15,7 @@ function App() {
         - px-4 sm:px-6 lg:px-8: Responsive side margins (narrower on phones, wider on laptops)
         - max-w-4xl lg:max-w-6xl: Keeps content centered and readable on giant screens
       */}
-      <main className="max-w-4xl mx-auto bg-zinc-200 min-h-screen border-x border-zinc-300 shadow-xl">
+      <main className="max-w-5xl lg:max-w-6xl mx-auto bg-zinc-200 border-x border-zinc-300 shadow-lg min-h-screen px-6 sm:px-10 pt-24 sm:pt-28 pb-16 space-y-16">
         <section id="hero">
           <About />
         </section>
