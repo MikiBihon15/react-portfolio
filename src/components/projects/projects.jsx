@@ -164,12 +164,38 @@ function ProjectModal({ project, onClose }) {
 }
 
 
+// ==========================================
+// BLOCK 3: Main Projects Container Section
+// ==========================================
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   return (
-    <section style={{ padding: '20px' }}>
-      <h2>Projects</h2>
-      <p>Some of my projects</p>
-    </section>
+    <div id="projects" className="py-6">
+      {/* Header */}
+      <div className="text-center mb-10">
+        <h2 className="text-3xl font-bold text-zinc-900">Projects</h2>
+        <p className="text-zinc-600 mt-2 text-sm sm:text-base">
+          Click on any project card to expand screenshot previews and details.
+        </p>
+      </div>
+
+      {/* Cards Grid List */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projectsData.map((project) => (
+          <ProjectCard 
+            key={project.id} 
+            project={project} 
+            onSelect={setSelectedProject} 
+          />
+        ))}
+      </div>
+
+      {/* Zoom Popup Lightbox */}
+      <ProjectModal 
+        project={selectedProject} 
+        onClose={() => setSelectedProject(null)} 
+      />
+    </div>
   );
 }
-
