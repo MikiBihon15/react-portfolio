@@ -3,31 +3,31 @@ import React, { useState } from 'react';
 // Project data based on your Java projects
 const projectsData = [
   {
-    id: 'payroll',
-    title: 'Payroll Computation System',
-    tagline: 'Coprog1 Finals Project',
-    shortDesc: 'Automated salary and payroll processing system calculating deductions, bonuses, and net pay.',
-    fullDesc: 'A desktop application built to streamline employee salary calculations. It handles base pay rates, tax deductions, overtime computation, and generates itemized digital pay slips.',
-    tech: ['Java', 'Swing', 'OOP'],
-    images: ['/projects/payroll.png'] // Place your image in public/projects/payroll.png
-  },
-  {
     id: 'library',
     title: 'Library Management System',
-    tagline: 'DataStruct Finals Project',
-    shortDesc: 'Data structure-driven application for book tracking, borrowing, and inventory management.',
-    fullDesc: 'Built using core data structures to efficiently search, add, remove, and manage library inventory alongside student borrowing records and due dates.',
-    tech: ['Java', 'Data Structures', 'Algorithms'],
-    images: ['/projects/library.png'] // Place your image in public/projects/library.png
+    tagline: 'DataStruct Finals Solo Project',
+    shortDesc: 'Coded with Java, this simple program provides book tracking, borrowing, and inventory management.',
+    fullDesc: 'With what I learned from our Data Structures course, as part of our finals, I was able to develop a program that is able to do basic library management functions capabilities such as book tracking, borrowing, and inverntory management.',
+    tech: ['Java', 'GitHub'],
+    images: ['/public/images/Libr1_web.png'] // Place your image in public/projects/library.png
+  },
+  {
+    id: 'portfolio',
+    title: 'Portfolio',
+    tagline: 'WebDev Project',
+    shortDesc: 'Simple portfolio website showcasing projects through the use of html, css, and javascript.',
+    fullDesc: 'This website acts as a portfolio to some of my previous projects during college. Using HTML, CSS, and JavaScript, I was able to other than have the structure but also add functionality and design throughout the simple website',
+    tech: ['HTML', 'CSS', 'JavaScript', 'GitHub'],
+    images: ['/public/images/main_web.png'] // Place your image in public/projects/payroll.png
   },
   {
     id: 'parkpal',
     title: 'ParkPalApp',
-    tagline: 'OOP Finals Project',
-    shortDesc: 'Smart parking space management and slot reservation system concept.',
-    fullDesc: 'An object-oriented solution for monitoring parking slot availability in real-time, calculating duration-based fees, and managing entry/exit logs.',
-    tech: ['Java', 'OOP Architecture', 'GUI'],
-    images: ['/projects/parkpal.png'] // Place your image in public/projects/parkpal.png
+    tagline: 'OOP Finals Group Project',
+    shortDesc: 'Smart parking slot management application.',
+    fullDesc: 'The idea first came from our Human-Computer Interaction course, me and my groupmate used this idea and applied it. With the use of Java, we created a simple and functional program that tracts parking spaces within the school.',
+    tech: ['Java', 'GitHub'],
+    images: ['/public/images/Park_web.png'] // Place your image in public/projects/parkpal.png
   }
 ];
 
