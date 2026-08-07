@@ -140,7 +140,7 @@ function ProjectModal({ project, onClose }) {
 
               {!isHovered && (
                 <span className="absolute bottom-3 right-3 text-[10px] bg-black/60 text-white px-2 py-1 rounded pointer-events-none">
-                  Hover to inspect 🔍
+                  Hover to inspect
                 </span>
               )}
             </div>
