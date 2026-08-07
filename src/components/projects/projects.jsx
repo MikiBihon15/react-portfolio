@@ -79,8 +79,89 @@ function ProjectCard({ project, onSelect }) {
 }
 
 
+// ==========================================
+// BLOCK 2: Zoom Lightbox Modal Component
+// ==========================================
+function ProjectModal({ project, onClose }) {
+  const [activeImgIndex, setActiveImgIndex] = useState(0);
 
+  if (!project) return null;
 
+  return (
+    <div 
+      className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
+      onClick={onClose}
+    >
+      <div 
+        className="bg-zinc-100 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative p-6 border border-zinc-300"
+        onClick={(e) => e.stopPropagation()} // Stop click propagation to backdrop
+      >
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 w-8 h-8 rounded-full bg-zinc-200 hover:bg-zinc-300 text-zinc-700 font-bold flex items-center justify-center transition-colors text-sm"
+          aria-label="Close modal"
+        >
+          ✕
+        </button>
+
+        {/* Title */}
+        <span className="text-xs font-semibold text-indigo-600 uppercase tracking-wider">
+          {project.tagline}
+        </span>
+        <h3 className="text-2xl font-bold text-zinc-900 mb-4 pr-8">
+          {project.title}
+        </h3>
+
+        {/* Expanded Image Frame */}
+        <div className="w-full h-60 sm:h-72 bg-zinc-900 rounded-xl overflow-hidden mb-4 flex items-center justify-center border border-zinc-300 relative">
+          <img
+            src={project.images[activeImgIndex]}
+            alt={project.title}
+            onError={(e) => { e.target.style.display = 'none'; }}
+            className="w-full h-full object-contain"
+          />
+          <span className="text-zinc-500 text-xs absolute pointer-events-none">
+            Add image to public/projects/ to view preview
+          </span>
+        </div>
+
+        {/* Thumbnails */}
+        {project.images.length > 1 && (
+          <div className="flex gap-2 mb-4">
+            {project.images.map((img, idx) => (
+              <button
+                key={idx}
+                onClick={() => setActiveImgIndex(idx)}
+                className={`w-16 h-12 rounded-lg border-2 overflow-hidden ${
+                  activeImgIndex === idx ? 'border-indigo-600' : 'border-zinc-300'
+                }`}
+              >
+                <img src={img} alt="thumbnail" className="w-full h-full object-cover" />
+              </button>
+            ))}
+          </div>
+        )}
+
+        {/* Project Description */}
+        <div className="space-y-4 text-zinc-700 text-sm leading-relaxed">
+          <p>{project.fullDesc}</p>
+
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-2">Technologies</h4>
+            <div className="flex flex-wrap gap-2">
+              {project.tech.map((t) => (
+                <span key={t} className="px-2.5 py-1 text-xs bg-zinc-200 text-zinc-800 rounded-md font-medium">
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 
 export default function Projects() {
