@@ -31,6 +31,58 @@ const projectsData = [
   }
 ];
 
+// ==========================================
+// BLOCK 1: Individual Project Card Component
+// ==========================================
+function ProjectCard({ project, onSelect }) {
+  return (
+    <div
+      onClick={() => onSelect(project)}
+      className="bg-zinc-100 rounded-xl overflow-hidden border border-zinc-300 shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer flex flex-col group hover:-translate-y-1"
+    >
+      {/* Image Preview Box */}
+      <div className="h-44 bg-zinc-300 relative overflow-hidden flex items-center justify-center">
+        <img
+          src={project.images[0]}
+          alt={project.title}
+          onError={(e) => { e.target.style.display = 'none'; }}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        />
+        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-xs font-semibold text-white backdrop-blur-[2px]">
+          Click to Zoom 🔍
+        </div>
+      </div>
+
+      {/* Card Content */}
+      <div className="p-5 flex flex-col flex-grow">
+        <span className="text-[11px] font-semibold text-indigo-600 uppercase tracking-wider mb-1">
+          {project.tagline}
+        </span>
+        <h3 className="text-base font-bold text-zinc-900 group-hover:text-indigo-600 transition-colors">
+          {project.title}
+        </h3>
+        <p className="text-xs text-zinc-600 mt-2 flex-grow leading-relaxed">
+          {project.shortDesc}
+        </p>
+
+        {/* Tech Badges */}
+        <div className="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-zinc-200">
+          {project.tech.map((item) => (
+            <span key={item} className="px-2 py-0.5 text-[10px] bg-zinc-200 text-zinc-800 rounded font-medium">
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+
+
+
+
 export default function Projects() {
   return (
     <section style={{ padding: '20px' }}>
@@ -39,3 +91,4 @@ export default function Projects() {
     </section>
   );
 }
+
