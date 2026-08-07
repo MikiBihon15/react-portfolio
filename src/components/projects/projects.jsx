@@ -179,7 +179,7 @@ function ProjectModal({ project, onClose }) {
 
             <div className="pt-4 border-t border-zinc-200">
               <h4 className="text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-3">
-                Technologies Used
+                Used in the project:
               </h4>
               <div className="flex flex-wrap gap-2">
                 {project.tech.map((t) => (
