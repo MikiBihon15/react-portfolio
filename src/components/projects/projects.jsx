@@ -9,7 +9,7 @@ const projectsData = [
     shortDesc: 'Coded with Java, this simple program provides book tracking, borrowing, and inventory management.',
     fullDesc: 'With what I learned from our Data Structures course, as part of our finals, I was able to develop a program that is able to do basic library management functions capabilities such as book tracking, borrowing, and inverntory management.',
     tech: ['Java', 'GitHub'],
-    images: ['/public/images/Libr1_web.png'] // Place your image in public/projects/library.png
+    images: ['/images/Libr1_web.png'] // Place your image in public/projects/library.png
   },
   {
     id: 'portfolio',
@@ -18,7 +18,7 @@ const projectsData = [
     shortDesc: 'Simple portfolio website showcasing projects through the use of html, css, and javascript.',
     fullDesc: 'This website acts as a portfolio to some of my previous projects during college. Using HTML, CSS, and JavaScript, I was able to other than have the structure but also add functionality and design throughout the simple website',
     tech: ['HTML', 'CSS', 'JavaScript', 'GitHub'],
-    images: ['/public/images/main_web.png'] // Place your image in public/projects/payroll.png
+    images: ['/images/main_web.png'] // Place your image in public/projects/payroll.png
   },
   {
     id: 'parkpal',
@@ -27,7 +27,7 @@ const projectsData = [
     shortDesc: 'Smart parking slot management application.',
     fullDesc: 'The idea first came from our Human-Computer Interaction course, me and my groupmate used this idea and applied it. With the use of Java, we created a simple and functional program that tracts parking spaces within the school.',
     tech: ['Java', 'GitHub'],
-    images: ['/public/images/Park_web.png'] // Place your image in public/projects/parkpal.png
+    images: ['/images/Park_web.png'] // Place your image in public/projects/parkpal.png
   }
 ];
 
