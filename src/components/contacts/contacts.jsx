@@ -109,7 +109,7 @@ export default function Contacts() {
             {/* Below-input error message */}
             {errors.name && (
               <p className="text-xs text-red-600 font-medium mt-1.5 flex items-center gap-1">
-                ⚠️ {errors.name}
+                 {errors.name}
               </p>
             )}
           </div>
@@ -135,7 +135,7 @@ export default function Contacts() {
             {/* Below-input error message */}
             {errors.email && (
               <p className="text-xs text-red-600 font-medium mt-1.5 flex items-center gap-1">
-                ⚠️ {errors.email}
+                 {errors.email}
               </p>
             )}
           </div>
@@ -161,7 +161,7 @@ export default function Contacts() {
             {/* Below-input error message */}
             {errors.message && (
               <p className="text-xs text-red-600 font-medium mt-1.5 flex items-center gap-1">
-                ⚠️ {errors.message}
+                 {errors.message}
               </p>
             )}
           </div>
@@ -187,7 +187,7 @@ export default function Contacts() {
           <span>↑</span>
         </button>
       </div>
-      
+
     </section>
   );
 }
