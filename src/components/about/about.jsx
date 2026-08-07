@@ -3,10 +3,6 @@ import React from 'react';
 export default function About() {
   return (
     <div id="hero" className="flex flex-col items-center justify-center text-center py-12 sm:py-16">
-      {/* Badge / Subheading */}
-      <span className="px-3 py-1 text-xs sm:text-sm font-medium bg-zinc-300 text-zinc-800 rounded-full mb-6">
-        React Web Developer
-      </span>
 
       {/* Main Hero Headline */}
       <h1 className="text-3xl sm:text-5xl font-extrabold text-zinc-900 tracking-tight max-w-3xl leading-tight mb-6">
