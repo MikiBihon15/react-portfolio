@@ -14,12 +14,12 @@ export default function About() {
       </h1>
 
       {/* Intro Description */}
-      <p className="text-base sm:text-lg text-zinc-700 max-w-2xl leading-relaxed mb-8">
+      <p className="text-base sm:text-lg text-zinc-700 max-w-2xl leading-relaxed mb-10">
         Welcome to another of my personal projects! This was made possible with React, TailwindCSS, and Vite. Here, take a look at my portfolio, showcasing some of my projects, and feel free to reach out if you want to collaborate or just say hi!
       </p>
 
       {/* Call to Action Buttons */}
-      <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+      <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-8">
         <a
           href="#projects"
           className="px-6 py-3 rounded-lg bg-zinc-900 text-white font-medium hover:bg-zinc-800 transition-colors shadow-sm text-center"
