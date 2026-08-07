@@ -106,29 +106,28 @@ function ProjectModal({ project, onClose }) {
         </button>
 
         {/* Title */}
-        <span className="text-xs font-semibold text-indigo-600 uppercase tracking-wider">
-          {project.tagline}
-        </span>
-        <h3 className="text-2xl font-bold text-zinc-900 mb-4 pr-8">
-          {project.title}
-        </h3>
+        <div className="text-center mb-4">
+          <span className="text-xs font-semibold text-indigo-600 uppercase tracking-wider">
+            {project.tagline}
+          </span>
+          <h3 className="text-2xl font-bold text-zinc-900 pr-4">
+            {project.title}
+          </h3>
+        </div>
 
         {/* Expanded Image Frame */}
-        <div className="w-full h-60 sm:h-72 bg-zinc-900 rounded-xl overflow-hidden mb-4 flex items-center justify-center border border-zinc-300 relative">
+        <div className="w-full h-64 sm:h-80 bg-zinc-200 rounded-xl overflow-hidden mb-4 flex items-center justify-center border border-zinc-300">
           <img
             src={project.images[activeImgIndex]}
             alt={project.title}
             onError={(e) => { e.target.style.display = 'none'; }}
             className="w-full h-full object-contain"
           />
-          <span className="text-zinc-500 text-xs absolute pointer-events-none">
-            Add image to public/projects/ to view preview
-          </span>
         </div>
 
-        {/* Thumbnails */}
+        {/* Thumbnails (if multiple images) */}
         {project.images.length > 1 && (
-          <div className="flex gap-2 mb-4">
+          <div className="flex justify-center gap-2 mb-4">
             {project.images.map((img, idx) => (
               <button
                 key={idx}
@@ -144,14 +143,14 @@ function ProjectModal({ project, onClose }) {
         )}
 
         {/* Project Description */}
-        <div className="space-y-4 text-zinc-700 text-sm leading-relaxed">
+        <div className="space-y-4 text-zinc-700 text-sm leading-relaxed text-center">
           <p>{project.fullDesc}</p>
 
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-2">Technologies</h4>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap justify-center gap-2">
               {project.tech.map((t) => (
-                <span key={t} className="px-2.5 py-1 text-xs bg-zinc-200 text-zinc-800 rounded-md font-medium">
+                <span key={t} className="px-2.5 py-1 text-xs bg-zinc-200 text-zinc-800 rounded-md font-medium border border-zinc-300">
                   {t}
                 </span>
               ))}
