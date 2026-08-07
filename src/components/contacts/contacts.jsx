@@ -176,6 +176,18 @@ export default function Contacts() {
           </button>
         </form>
       </div>
+
+      {/* BACK TO TOP BUTTON */}
+      <div className="mt-12 text-center">
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="inline-flex items-center gap-2 px-4 py-2 bg-zinc-200 hover:bg-zinc-300 text-zinc-700 text-xs font-semibold rounded-full border border-zinc-300 shadow-sm transition-all hover:scale-105 active:scale-95"
+        >
+          <span>Back to top</span>
+          <span>↑</span>
+        </button>
+      </div>
+      
     </section>
   );
 }

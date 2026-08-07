@@ -19,7 +19,7 @@ export default function About() {
       </p>
 
       {/* Call to Action Buttons */}
-      <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-8">
+      <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
         <a
           href="#projects"
           className="px-6 py-3 rounded-lg bg-zinc-900 text-white font-medium hover:bg-zinc-800 transition-colors shadow-sm text-center"
